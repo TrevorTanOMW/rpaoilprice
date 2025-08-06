@@ -2,6 +2,14 @@ import streamlit as st
 import streamlit.components.v1 as components
 import random
 
+# Page configuration
+st.set_page_config(
+    page_title="Oil Price Dashboard",
+    page_icon="🛢️",
+    layout="wide",
+    initial_sidebar_state="collapsed"
+)
+
 # Base data with realistic price ranges
 base_oil_data = [
     ("🇺🇸", " WTI Crude", (65, 75), "crude"),
@@ -112,5 +120,6 @@ html_content = f"""
 """
 
 # Display in Streamlit using components.html for full CSS support
-st.title("Oil Price Dashboard")
+st.title("🛢️ Oil Price Dashboard")
+st.markdown("*Real-time oil and gas futures data simulation*")
 components.html(html_content, height=800, scrolling=False)
